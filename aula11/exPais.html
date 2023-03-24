@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body{
+            background-color: chartreuse;
+            font: normal 20pt Arial;
+        }
+        div{
+            color: black;
+            font: normal 20pt Arial;
+        } 
+    </style>
+</head>
+<body> 
+    <h1>Verificação de Países</h1>
+    Digite o seu páis de origem: <input type="txtpais" name="txtpais" id="txtpais">  
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="cep"></div>
+
+    <Script>
+        function calcular() {
+            var txtmundo = window.document.querySelector('txtpais')
+            var cep = window.document.querySelector('div#cep');
+            var pais= String(txtpais.value)
+            cep.innerHTML = `<p>O seu país de origem é <strong> ${pais} </strong></p>`
+            if(pais != 'Brasil'){
+                cep.innerHTML += 'Você é estrangeiro!'
+            }else {
+                cep.innerHTML += '<p>Você é Brasileiro!</p>'
+            }
+            
+            }
+    </Script>
+
+    
+</body>
+</html>
